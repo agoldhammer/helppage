@@ -12,3 +12,6 @@ vite.config.ts.timestamp-*
 pnpm-lock.yaml
 .npmrc
 
+
+# Local Netlify folder
+.netlify
