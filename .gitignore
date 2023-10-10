@@ -15,3 +15,7 @@ pnpm-lock.yaml
 
 # Local Netlify folder
 .netlify
+
+# added
+package-lock.json
+
