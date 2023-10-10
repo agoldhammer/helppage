@@ -17,7 +17,9 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   {#if active_id === card_id}
     <div class="help-card-btm">
-      <slot name="description" />
+      <div class="desc">
+        <slot name="description" />
+      </div>
       <button id={card_id} class="close">&#10060;</button>
     </div>
   {/if}
@@ -26,9 +28,7 @@
 <style>
   .help-card {
     padding: 8px;
-    margin: 16px;
-    /* width: 80%; */
-    /* border: 2px solid blue; */
+    margin: 8px;
     border-radius: 8px;
     box-shadow: 5px 10px 8px #888888;
   }
@@ -36,7 +36,6 @@
   .help-card-top {
     display: grid;
     grid-template-columns: 10fr 1fr;
-    /* border-bottom: 2px solid blue; */
     color: white;
     background-color: blue;
     border-radius: 8px;
@@ -46,9 +45,14 @@
   .help-card-btm {
     display: grid;
     grid-template-columns: 10fr 1fr;
-    background-color: lightsalmon;
+    background-color: rgb(114, 43, 15);
+    color: white;
     padding: 12px;
     border-radius: 8px;
+  }
+
+  .desc {
+    padding: 8px;
   }
 
   .open,
@@ -57,7 +61,7 @@
     color: red;
     display: flex;
     justify-content: center;
-    /* border: 2px solid black; */
     align-items: center;
+    margin: 8px;
   }
 </style>

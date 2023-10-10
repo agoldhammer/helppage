@@ -29,4 +29,10 @@ export const helpitems = [
       suggest a category, the article is marked 'uncategorized'. Display can be limited to a particular category by clicking or touching the
       category name. Clicking again, or clicking on another category, will deselect.`,
   },
+  {
+    id: "help5",
+    topic: "Quirks",
+    description: `Some articles may appear to be duplicates, but these generally reflect some subtle alteration of the summary text that goes undetected by the
+    duplicate elimination algorithm`,
+  },
 ];

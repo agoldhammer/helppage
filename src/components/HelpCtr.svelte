@@ -17,7 +17,6 @@
     } else {
       active_id_store.set(button_id);
     }
-    // console.log("HelpCtr", e.currentTarget);
   }
 </script>
 
@@ -28,7 +27,7 @@
   {#each helpitems as helpitem}
     <HelpCard card_id={helpitem.id} active_id={$active_id_store}>
       <h2 slot="topic">{helpitem.topic}</h2>
-      <p slot="description" transition:fade={{ duration: 500 }}>
+      <p slot="description" in:fade={{ duration: 300 }}>
         {helpitem.description}
       </p>
     </HelpCard>
@@ -38,10 +37,15 @@
 <style>
   h1 {
     text-align: center;
+    color: white;
+    height: 2em;
+    padding-top: 10px;
+    border-radius: 8px;
+    background-image: linear-gradient(90deg, rgb(114, 43, 15), 70%, blue);
   }
   .help-ctr {
     height: 100vh;
-    /* border: 2px solid red; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 8px;
     overflow-y: scroll;
   }
